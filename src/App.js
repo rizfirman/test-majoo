@@ -48,30 +48,6 @@ const App = () => {
     }
     console.log(checked);
   };
-  //create button toggle ascending/descending data by date
-  const sortByDateAsc = () => {
-    const sorted = [...pendingList].sort((a, b) => {
-      return a.date - b.date;
-    });
-    setPendingList(sorted);
-  };
-
-  const sortByDateDesc = () => {
-    const sorted = [...pendingList].sort((a, b) => {
-      return b.date - a.date;
-    });
-    setPendingList(sorted);
-  };
-
-  const handleSort = () => {
-    if (sort === false) {
-      sortByDateAsc();
-      setSort(true);
-    } else {
-      sortByDateDesc();
-      setSort(false);
-    }
-  };
 
   const handleEditModeFinishList = (id) => {
     toggleEditFinish();
@@ -301,7 +277,7 @@ const App = () => {
             onClick={handleSubmitEditPending}
             onChangeSwitch={onChangeSwitch}
             checked={checked}
-            handleSort={handleSort}
+           
           />
           <EditModalFinish
             isOpen={editModalFinish}
