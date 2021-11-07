@@ -1,0 +1,4 @@
+export const FETCH_PENDING_DATA = 'FETCH_PENDING_DATA';
+export const FETCH_FINISH_DATA = 'FETCH_FINISH_DATA';
+export const NEW_POST = 'NEW_POST';
+
